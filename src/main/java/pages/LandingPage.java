@@ -1,5 +1,6 @@
 package pages;
 
+import libs.TestData;
 import libs.Util;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -48,5 +49,13 @@ public class LandingPage extends InteractionsWithElements{
     public LandingPage clickLogInButton(){
         clickOnElement(logInButton);
         return this;
+    }
+
+    public MyAccountPage fillInLogInForm() {
+        clickOnElement(logInDropDown);
+        enterUserEmail(TestData.LOGIN_EMAIL);
+        enterUserPassword(TestData.LOGIN_PASSWORD);
+        clickLogInButton();
+        return new MyAccountPage(webDriver);
     }
 }

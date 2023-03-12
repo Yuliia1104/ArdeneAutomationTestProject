@@ -11,6 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import pages.LandingPage;
+import pages.MyAccountPage;
 import pages.elements.HeaderElements;
 
 import java.time.Duration;
@@ -19,6 +20,7 @@ public class BaseTest {
     protected WebDriver webDriver;
     protected LandingPage landingPage;
     protected HeaderElements headerElements;
+    protected MyAccountPage myAccountPage;
 
     @Before
     public void setUp(){
@@ -28,6 +30,7 @@ public class BaseTest {
         webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         landingPage = new LandingPage(webDriver);
         headerElements = new HeaderElements(webDriver);
+        myAccountPage = new MyAccountPage(webDriver);
     }
 
     @After

@@ -1,5 +1,7 @@
 package pages;
 
+import libs.ConfigProperties;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +17,7 @@ public class InteractionsWithElements {
     protected WebDriver webDriver;
     Logger logger = Logger.getLogger(getClass());
     protected WebDriverWait webDriverWait15, webDriverWait30;
+    public static ConfigProperties configProperties = ConfigFactory.create(ConfigProperties.class);
 
     public InteractionsWithElements(WebDriver webDriver) {
         this.webDriver = webDriver;
@@ -69,6 +72,15 @@ public class InteractionsWithElements {
         }catch (Exception e){
             return false;
         }
+    }
+
+    protected void checkDisplayedElementOnly(WebElement webElement){
+        Assert.assertTrue(getWebElementName(webElement) + " element is not displayed", isElementDisplayed(webElement));
+    }
+
+    protected void forTextComparing(String text, WebElement webElement){
+        Assert.assertEquals("Text of the element does not found its match", text, webElement.getText());
+        logger.info(getWebElementName(webElement) + " found its match.");
     }
     protected String getWebElementName(WebElement webElement){
         try{

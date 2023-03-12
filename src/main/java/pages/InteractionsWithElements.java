@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -22,8 +23,8 @@ public class InteractionsWithElements {
     public InteractionsWithElements(WebDriver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(webDriver, this);
-        webDriverWait15 = new WebDriverWait(webDriver, Duration.ofSeconds(15));
-        webDriverWait30 = new WebDriverWait(webDriver, Duration.ofSeconds(30));
+        webDriverWait15 = new WebDriverWait(webDriver, Duration.ofSeconds(configProperties.TIME_FOR_EXPLICIT_WAIT_LOW()));
+        webDriverWait30 = new WebDriverWait(webDriver, Duration.ofSeconds(configProperties.TIME_FOR_EXPLICIT_WAIT_HIGH()));
     }
 
     protected void clickOnElement(WebElement webElement){
@@ -79,9 +80,28 @@ public class InteractionsWithElements {
     }
 
     protected void forTextComparing(String text, WebElement webElement){
-        Assert.assertEquals("Text of the element does not found its match", text, webElement.getText());
+        Assert.assertEquals(getWebElementName(webElement)+" Text of the element does not found its match", text, webElement.getText());
         logger.info(getWebElementName(webElement) + " found its match.");
     }
+
+    protected void selectValueFromDropDown(WebElement dropDown, String value){
+        try {
+            Select select = new Select(dropDown);
+            select.selectByValue(value);
+            logger.info(value + " province is selected");
+        }catch (Exception e){
+            printErrorStopTest(e);
+        }
+    }
+
+    protected void userRefreshTab(){
+        webDriver.navigate().refresh();
+    }
+
+    protected void acceptAlert(){
+        webDriver.switchTo().alert().accept();
+    }
+
     protected String getWebElementName(WebElement webElement){
         try{
             return webElement.getAccessibleName();

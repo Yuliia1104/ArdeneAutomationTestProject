@@ -5,18 +5,15 @@ public class TestData {
     public static final String LOGIN_PASSWORD = "JonsKaterina12";
     public static final String USER_NAME = "Katerina";
 
+    public static final String LAST_NAME = "Jons";
+    public static final String STREET_ADDRESS = "15 Strawberry Str";
+    public static final String CITY_NAME = "Morden";
+    public static final String PROVINCE_OPTION = "MB";
+    public static final String HOME_NAME = "Home Address";
+    public static final String POSTAL_CODE = "R6M1K3";
+    public static final String COUNTRY = "CA";
+
     public static final String MY_PAY_SETTINGS = "My payment settings";
     public static final String MY_COMM_PREF = "My communication preferences";
-    public static final String NEW_ARRIVALS = "NEW ARRIVALS";
-    public static final String CLOTHING = "CLOTHING";
-    public static final String SHOES = "SHOES";
-    public static final String ACCESSORIES = "ACCESSORIES";
-    public static final String CURVE = "CURVE";
-    public static final String MEN = "MEN";
-    public static final String KIDS = "KIDS";
-    public static final String SALE = "SALE";
-    public static final String SOCIAL_SHOP = "SOCIAL SHOP";
-    public static final String COMMA = ",";
-    public static final String EXPECTED_ELEMENTS = NEW_ARRIVALS+COMMA+CLOTHING+COMMA+SHOES+COMMA+ACCESSORIES+COMMA+CURVE+COMMA
-            +MEN+COMMA+KIDS+COMMA+SALE+COMMA+SOCIAL_SHOP;
+
 }

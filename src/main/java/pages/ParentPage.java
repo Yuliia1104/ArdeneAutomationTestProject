@@ -1,4 +1,9 @@
 package pages;
 
-public class ParentPage {
+import org.openqa.selenium.WebDriver;
+
+public class ParentPage extends InteractionsWithElements{
+    public ParentPage(WebDriver webDriver) {
+        super(webDriver);
+    }
 }

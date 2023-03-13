@@ -13,6 +13,8 @@ public class HeaderElements extends InteractionsWithElements {
     private WebElement customDropDown;
     @FindBy(xpath = ".//div[@class='utility-bar desktop-only']//a[@title='My addresses']")
     private WebElement myAddresses;
+    @FindBy(xpath = ".//div[@class='utility-bar desktop-only']//a[@title='My Account']")
+    private WebElement myAccount;
 
     public HeaderElements(WebDriver webDriver) {
         super(webDriver);
@@ -30,5 +32,10 @@ public class HeaderElements extends InteractionsWithElements {
     public MyAddressPage clickMyAddresseButton() {
         clickOnElement(myAddresses);
         return new MyAddressPage(webDriver);
+    }
+
+    public MyAccountPage clickOnMyAccountOption(){
+        clickOnElement(myAccount);
+        return new MyAccountPage(webDriver);
     }
 }

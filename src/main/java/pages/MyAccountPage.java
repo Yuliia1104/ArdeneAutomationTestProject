@@ -35,6 +35,10 @@ public class MyAccountPage extends ParentPage {
     private static final String navElement = ".//nav//a[@class='has-sub-menu top-level-tag']";
     @FindBy(xpath = navElement)
     private List<WebElement> listOfOptions;
+    @FindBy(xpath = ".//nav[@id='navigation']//a[@href='https://www.ardene.com/ca/en/accessories-2']")
+    private WebElement accessoriesTab;
+    @FindBy(xpath = ".//ul[@class='account-navigation']//a[@title='Modify your wish list']")
+    private WebElement myFavesTab;
 
     public MyAccountPage(WebDriver webDriver) {
         super(webDriver);
@@ -121,5 +125,15 @@ public class MyAccountPage extends ParentPage {
         }
         softAssertions.assertAll();
         return this;
+    }
+
+    public AccessoriesPage clickOnAccessoriesTab() {
+        clickOnElement(accessoriesTab);
+        return new AccessoriesPage(webDriver);
+    }
+
+    public MyFavesPage clickOnMyFavesTab() {
+        clickOnElement(myFavesTab);
+        return new MyFavesPage(webDriver);
     }
 }

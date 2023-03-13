@@ -1,0 +1,80 @@
+Landing page:
+
+".//div[@class='utility-bar desktop-only']//span[@class='span-icon']"
+".//ul[@class='menu-utility-user']//input[@name='dwfrm_login_username']"
+".//ul[@class='menu-utility-user']//input[@name='dwfrm_login_password']"
+".//ul[@class='menu-utility-user']//button[@name='dwfrm_login_login']"
+
+------------------------
+
+My Account page:
+
+".//div[@class='utility-bar desktop-only']//a[@title='My Account']"
+".//div[@class='utility-bar desktop-only']//a[@title='My rewards']"
+".//div[@class='utility-bar desktop-only']//a[@title='My payment settings']"
+".//div[@class='utility-bar desktop-only']//a[@title='My orders']"
+".//div[@class='utility-bar desktop-only']//a[@title='My profile']"
+".//div[@class='utility-bar desktop-only']//a[@title='My addresses']"
+".//div[@class='utility-bar desktop-only']//a[@title='My communication preferences']"
+".//div[@class='utility-bar desktop-only']//a[@title='Logout']"
+".//nav//a[@class='has-sub-menu top-level-tag']"
+".//nav[@id='navigation']//a[@href='https://www.ardene.com/ca/en/accessories-2']"
+".//ul[@class='account-navigation']//a[@title='Modify your wish list']"
+".//div[@class='utility-bar desktop-only']//a[@href='https://www.ardene.com/ca/en/account'and @title='User: Hello %s']"
+".//div[@class='utility-bar desktop-only']//span[@class='span-icon']"
+
+-----------------------------
+
+My Addresses Page:
+
+".//h1[contains(text(), 'My Addresses')]"
+".//div[@id='addresses']//a[@title='Create New Address for this account']"
+".//form[@class='form-horizontal']"
+".//input[@placeholder='Address Name *']"
+".//input[@placeholder='First Name *']"
+".//input[@placeholder='Last Name *']"
+".//input[@placeholder='Address *']"
+".//input[@placeholder='City *']"
+".//select[@class='input-select required']"
+".//input[@placeholder='Postal Code *']"
+".//select[@class='input-select country required']"
+".//button[@type='submit' and @name='dwfrm_profile_address_create']"
+".//div[@class='mini-address-title']"
+".//*[@title='Delete this address']"
+".//*[@class='address-tile  default']"
+
+--------------------------------------
+
+Accessories page:
+
+".//div[@class='desktop-only']//a[@href='https://www.ardene.com/ca/en/accessories-2']"
+".//div[@class='desktop-only']//a[@href='https://www.ardene.com/ca/en/bags-1']"
+
+---------------------------------------------
+
+Bags Page:
+
+".//div[@id='secondary']//div[@class='desktop-only breadcrumb-page-title' and contains(text(), 'view all bags')]"
+".//a[@class='thumb-link']"
+
+--------------------------------------------
+
+Bag Item Page:
+
+".//a[@class='wishlist-btn icon-ico-wishlist']"
+
+------------------------------------------
+
+My Faves Page:
+
+".//div[@class='account__section-header']//h1"
+".//form//button[@value='Add to Bag']"
+".//div[@class='image-details-container']"
+".//form//button[@class='button-text delete-item']"
+".//h2[@class='empty-text']"
+
+---------------------------------------------
+
+LogIn Page:
+
+".//div[@class='utility-bar desktop-only']//span[@class='span-icon']"

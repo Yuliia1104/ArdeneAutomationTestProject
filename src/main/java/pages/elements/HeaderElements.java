@@ -3,9 +3,7 @@ package pages.elements;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import pages.InteractionsWithElements;
-import pages.MyAccountPage;
-import pages.MyAddressPage;
+import pages.*;
 
 public class HeaderElements extends InteractionsWithElements {
     private String userNameLogo = ".//div[@class='utility-bar desktop-only']//a[@href='https://www.ardene.com/ca/en/account'and @title='User: Hello %s']";
@@ -15,6 +13,8 @@ public class HeaderElements extends InteractionsWithElements {
     private WebElement myAddresses;
     @FindBy(xpath = ".//div[@class='utility-bar desktop-only']//a[@title='My Account']")
     private WebElement myAccount;
+    @FindBy(xpath = ".//div[@class='utility-bar desktop-only']//a[@title='Logout']")
+    private WebElement logOutButton;
 
     public HeaderElements(WebDriver webDriver) {
         super(webDriver);
@@ -37,5 +37,10 @@ public class HeaderElements extends InteractionsWithElements {
     public MyAccountPage clickOnMyAccountOption(){
         clickOnElement(myAccount);
         return new MyAccountPage(webDriver);
+    }
+
+    public LogInPage clickOnLogOutButton() {
+        clickOnElement(logOutButton);
+        return new LogInPage(webDriver);
     }
 }

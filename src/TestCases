@@ -1,0 +1,131 @@
+AEP#1. Log in verification.
+Preconditions: Create a new user using example of Test Data: example@email.com; First Name and Last Name using latin letters; Password using latin letters, postal code using all caps letters and digits where the pattern of postal code is Caps letter, digit, Caps letter, digit, Caps letter, digit.
+Description: Verify that user can log in in his account by using log in drop down, email, password fields and log in button.
+
+Existing Credentials Example: Email: kittyswan12@gmil.com
+                                     Password: JonsKaterina12
+
+
+STR:
+Open URL https://www.ardene.com/
+ER: Landing page is displayed. Log in drop down are displayed.
+
+2. Click on the Log In dropdown.
+ER: Drop down shows options to log in and create an account.
+
+3.Enter email into Email input field.
+ER: Email is entered.
+
+4. Enter password into Password input field.
+ER: Password is entered.
+
+5. Press Log in button.
+ER: User is redirected to My Account page, Log in dropdown is switched on User’s options dropdown.
+
+POST CONDITION: Delete newly created user.
+
+-------------------------------------------------------------
+
+AEP#2. Options available in User’s profile.
+PRECONDITIONS: If there is no user available, register a new user using example of Test Data: example@email.com; First Name and Last Name using latin letters; Password using latin letters, postal code using all caps letters and digits where the pattern of postal code is Caps letter, digit, Caps letter, digit, Caps letter, digit.
+
+Existing Credentials Example: Email: kittyswan12@gmil.com
+                                     Password: JonsKaterina12
+
+STR:
+1.Log in to the account using credentials sample.
+ER: User is redirected to My Account page, Log in dropdown is switched on User’s options dropdown.
+
+2. Click on the User’s options dropdown and verify options available for the user that include: My Account, My rewards, My payment settings, My orders, My profile, My addresses, My communication preferences and Log Out buttons.
+ER: Options in dropdown are available.
+
+3. Verify shopping options available for the user in navigation bar on the upper right side of the header that include:
+NEW ARRIVALS, CLOTHING, SHOES, ACCESSORIES, CURVE, MEN, KIDS, SALE, SOCIAL SHOP.
+ER: Options for shopping on Navigation bar are available..
+
+POST CONDITION: Delete newly created user.
+
+--------------------------------------------------------------
+
+AEP#3. My addresses form verification.
+Description: Verify that add address form is available for the user. User is able to create a default address using address form.
+PRECONDITIONS: If there is no user available, register a new user using example of Test Data: example@email.com; First Name and Last Name using latin letters; Password using latin letters, postal code using all caps letters and digits where the pattern of postal code is Caps letter, digit, Caps letter, digit, Caps letter, digit.
+
+Existing Credentials Example: Email: kittyswan12@gmil.com
+                                     Password: JonsKaterina12
+
+STR:
+1. Log in into account using credentials example.
+ER: User is redirected to My Account page, Log in dropdown is switched on User’s options dropdown.
+
+2. Click on ‘My addresses’ tab.
+ER: User is redirected on the My addresses page, Create New Address button is available.
+
+3. Click on Create New Address button.
+ER: ADD ADDRESS form is displayed.
+
+Fill in required fields:
+
+3.1 Address Name *
+3.2 First Name *
+3.3 Last Name *
+3.4 Address *
+3.5 City *
+3.6 Province *
+3.7 Postal Code *
+3.8 Country *
+3.9 Save Button
+ER: Required fields are filled in. Default address is created.
+
+
+
+POST CONDITION: Delete newly created address Delete newly created user.
+
+-------------------------------------------------------
+
+AEP#4. Wish list functionality verification.
+Discretion: Verify that user is able to add an item into a wish list.
+Precondition: If there is no user available, register a new user using example of Test Data: example@email.com; First Name and Last Name using latin letters; Password using latin letters, postal code using all caps letters and digits where the pattern of postal code is Caps letter, digit, Caps letter, digit, Caps letter, digit.
+
+Existing Credentials Example: Email: kittyswan12@gmil.com
+                                     Password: JonsKaterina12
+
+STR:
+ 1. Log in to account using credentials example.
+ER: User is redirected to the My addresses page. Dropdown with user name is present.
+
+ 2. In navigation menu click on ACCESSORIES tab.
+ER: User is redirected to ACCESSORIES page, navigation menu Of accessories is displayed.
+
+ 3. Click on tab bags.
+ER: User is redirected to Bags page.
+
+
+ 4. Click on any item available to buy.
+ER: User is redirected to a page with item details.
+
+ 5. Click on button shaped as a heart on upper left corner of the item photo.
+ER: User is redirected to a ‘My faves’ page, item is added, Add to bag button is displayed.
+
+POST CONDITION:  Delete added item. Delete newly created user.
+
+------------------------------------------------------------------
+
+AEP#5. Log out verification.
+Discretion: Verify that user can log out from his account.
+Precondition: If there is no user available, register a new user using example of Test Data: example@email.com; First Name and Last Name using latin letters; Password using latin letters, postal code using all caps letters and digits where the pattern of postal code is Caps letter, digit, Caps letter, digit, Caps letter, digit.
+
+Existing Credentials Example: Email: kittyswan12@gmil.com
+                                     Password: JonsKaterina12
+
+STR:
+1. Log in into account using credentials example.
+ ER: User is redirected to My Account page, Log in dropdown is switched on User’s options dropdown.
+
+2. Click on the User’s options dropdown.
+ER: Options in dropdown are displayed.
+
+3. Click on Log Out option.
+ER: User is redirected to a LogIn page, Log in dropdown is displayed.
+
+POST CONDITION: Delete newly created user.

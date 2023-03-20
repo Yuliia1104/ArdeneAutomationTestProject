@@ -38,7 +38,7 @@ public class NewAddressAdditionTest extends BaseTest {
                 .checkIsRedirectedToMyAddressPage()
                 .clickDeleteDefaultAddressButton()
                 .acceptDeleteAlert()
-                .isDefaultAddressDisplayed()
+                .checkIsDefaultAddressDisplayed()
         ;
     }
 }

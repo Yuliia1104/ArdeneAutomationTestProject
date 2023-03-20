@@ -124,7 +124,7 @@ public class MyAddressPage extends ParentPage{
         return this;
     }
 
-    public MyAddressPage isDefaultAddressDisplayed() {
+    public MyAddressPage checkIsDefaultAddressDisplayed() {
         webDriverWait15.until(ExpectedConditions.invisibilityOf(address));
         Assert.assertFalse("Address has not been deleted", isElementDisplayed(address));
         return this;

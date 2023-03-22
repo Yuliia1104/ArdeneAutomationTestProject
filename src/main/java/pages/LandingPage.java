@@ -32,6 +32,7 @@ public class LandingPage extends InteractionsWithElements{
     }
 
     public LandingPage clickLogInDropDown(){
+        Util.waitABit(1);
         clickOnElement(logInDropDown);
         return this;
     }

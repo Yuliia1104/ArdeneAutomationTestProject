@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import libs.TestData;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Assert;
@@ -57,7 +58,7 @@ public class MyAccountPage extends ParentPage {
         checkIsRedirectedToMyAccountPage();
         return this;
     }
-
+    @Step
     public MyAccountPage checkIsRedirectedToMyAccountPage() {
         Assert.assertTrue("Element is not displayed", getHeaderElements().isUserNameLogoDisplayed(TestData.USER_NAME));
         return this;

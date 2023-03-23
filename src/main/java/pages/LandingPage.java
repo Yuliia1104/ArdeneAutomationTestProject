@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import libs.TestData;
 import libs.Util;
 import org.junit.Assert;
@@ -18,7 +19,7 @@ public class LandingPage extends InteractionsWithElements{
     private WebElement inputPassword;
     @FindBy(xpath = ".//ul[@class='menu-utility-user']//button[@name='dwfrm_login_login']")
     private WebElement logInButton;
-
+    @Step
     public LandingPage openLandingPage(){
         try {
             webDriver.get("https://www.ardene.com/");
@@ -30,28 +31,28 @@ public class LandingPage extends InteractionsWithElements{
         }
         return this;
     }
-
+    @Step
     public LandingPage clickLogInDropDown(){
         Util.waitABit(1);
         clickOnElement(logInDropDown);
         return this;
     }
-
+    @Step
     public LandingPage enterUserEmail(String email){
         enterTextIntoElement(inputUserEmail, email);
         return this;
     }
-
+    @Step
     public LandingPage enterUserPassword(String password){
         enterTextIntoElement( inputPassword, password);
         return  this;
     }
-
+    @Step
     public LandingPage clickLogInButton(){
         clickOnElement(logInButton);
         return this;
     }
-
+    @Step
     public MyAccountPage fillInLogInForm() {
         clickOnElement(logInDropDown);
         enterUserEmail(TestData.LOGIN_EMAIL);

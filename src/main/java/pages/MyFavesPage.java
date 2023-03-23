@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Step;
 import libs.Util;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -22,17 +23,17 @@ public class MyFavesPage extends ParentPage{
     public MyFavesPage(WebDriver webDriver) {
         super(webDriver);
     }
-
+    @Step
     public MyFavesPage checkIsRedirectedToMyFavesPage() {
         checkDisplayedElementOnly(myFavesHeader);
         return this;
     }
-
+    @Step
     public MyFavesPage checkIsItemAddedToMyFavesList() {
         checkDisplayedElementOnly(addToBagButton);
         return this;
     }
-
+    @Step
     public MyFavesPage deleteItemsInMyFavesList() {
         Util.waitABit(1);
         int counter = myFavesItems.size();
@@ -49,7 +50,7 @@ public class MyFavesPage extends ParentPage{
         }
         return this;
     }
-
+    @Step
     public MyFavesPage checkAlertMessage(){
         Util.waitABit(1);
         Assert.assertTrue("Element is not found", isElementDisplayed(alertMessage));
